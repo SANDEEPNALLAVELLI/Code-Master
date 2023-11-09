@@ -1,0 +1,42 @@
+
+def quiz_game():
+    score = 0
+
+    questions = [
+        {
+            "question": "What is the capital of France?",
+            "options": ["a. London", "b. Paris", "c. Rome", "d. Berlin"],
+            "answer": "b"
+        },
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": ["a. Venus", "b. Mars", "c. Jupiter", "d. Saturn"],
+            "answer": "b"
+        },
+        {
+            "question": "What is the powerhouse of the cell?",
+            "options": ["a. Nucleus", "b. Ribosome", "c. Mitochondria", "d. Endoplasmic reticulum"],
+            "answer": "c"
+
+        }
+        # Add more questions here
+    ]
+
+    for q in questions:
+        print(q["question"])
+        for option in q["options"]:
+            print(option)
+        user_answer = input("Enter your answer (a, b, c, or d): ").lower()
+        if user_answer == q["answer"]:
+            print("Correct!")
+            score += 1
+        else:
+            print("Incorrect!")
+
+    print(f"Your final score is {score}/{len(questions)}")
+
+
+# Run the quiz game
+quiz_game()
+
+
